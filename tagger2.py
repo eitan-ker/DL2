@@ -49,12 +49,12 @@ BATCH_SIZE = 64
 if TASK_TYPE == 'pos':
     FIELD_SEPARATOR = ' '
     VALIDATION_BATCH_SIZE = 64
-    TRAINING_EPOCHS = 12
+    TRAINING_EPOCHS = 9
     IS_ENTITY_RECOGNITION = False
 elif TASK_TYPE == 'ner':
     FIELD_SEPARATOR = '\t'
     VALIDATION_BATCH_SIZE = 64
-    TRAINING_EPOCHS = 12
+    TRAINING_EPOCHS = 10
     IS_ENTITY_RECOGNITION = True
 else:
     print("invalid choice should run 'python3 tagger1.py ner/pos'")
@@ -258,7 +258,7 @@ def create_visualization(output_dir, data, filename, title_text):
 
 
 def generate_predictions(model, processed_data, original_data, tag_decoder):
-    output_filename = f"./test2.{TASK_TYPE}"
+    output_filename = f"./test3.{TASK_TYPE}"
     if os.path.exists(output_filename):
         os.remove(output_filename)
     with open(output_filename, "w", encoding="utf-8") as f:
