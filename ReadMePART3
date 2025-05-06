@@ -1,0 +1,10 @@
+all the following should be in the same dir:
+
+|- embeddings (dir)
+|- tagger2.py
+|- pos (dir)
+|- ner (dir)
+
+in order to run the code, choose which one do you want to run:
+1. python3 tagger2.py pos
+2. python3 tagger2.py ner
